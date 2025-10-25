@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupAssignment", "GroupAssignment\GroupAssignment.csproj", "{64033F70-7331-4423-84F7-501F8F81236D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64033F70-7331-4423-84F7-501F8F81236D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64033F70-7331-4423-84F7-501F8F81236D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64033F70-7331-4423-84F7-501F8F81236D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64033F70-7331-4423-84F7-501F8F81236D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B89E2CD2-455C-4687-B992-049CEDE9EC93}
+	EndGlobalSection
+EndGlobal
