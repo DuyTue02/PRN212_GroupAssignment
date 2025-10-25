@@ -1,0 +1,396 @@
+using BLL.Services;
+using DAL.Entities;
+using System.Windows;
+
+namespace GroupAssignment
+{
+    public partial class LoginWindow : Window
+    {
+        private readonly UserAccountService _userAccountService;
+
+        public LoginWindow()
+        {
+            InitializeComponent();
+            _userAccountService = new UserAccountService();
+
+            txtPassword.Password = "admin123";
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            string email = txtEmail.Text;
+            string password = txtPassword.Password;
+
+            User userAccount = _userAccountService.GetUserAccount(email, password);
+
+            if (userAccount == null)
+            {
+                MessageBox.Show("Email hoặc mật khẩu không đúng.", "Login Failed",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (userAccount.Role == "Admin" || userAccount.Role == "Staff")
+            {
+                MessageBox.Show($"Chào mừng {userAccount.FullName}! Vai trò: {userAccount.Role}");
+                VehicleManagementWindow vehicleWindow = new VehicleManagementWindow(userAccount);
+                vehicleWindow.Show();
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Bạn không có quyền truy cập chức năng này.", "Access Denied",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+    }
+}
+using BLL.Services;
+using DAL.Entities;
+using System.Windows;
+using System.Windows.Controls;
+using System; 
+using System.Collections.Generic;
+
+namespace GroupAssignment
+{
+    public partial class VehicleManagementWindow : Window
+    {
+        private readonly VehicleService _vehicleService;
+        private User _currentUser;
+        public VehicleManagementWindow(User loggedInUser)
+        {
+            InitializeComponent();
+            _vehicleService = new VehicleService();
+            _currentUser = loggedInUser;
+            this.Title = $"Vehicle Management (Welcome, {_currentUser.FullName}!)";
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            LoadVehicles();
+            CheckPermissions();
+        }
+        private void LoadVehicles()
+        {
+            try
+            {
+                dgVehicles.ItemsSource = _vehicleService.GetVehicles();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading vehicles: " + ex.Message);
+            }
+        }
+
+        private void CheckPermissions()
+        {
+            if (_currentUser.Role != "Admin")
+            {
+                btnDelete.IsEnabled = false;
+            }
+        }
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Vehicle vehicle = GetVehicleFromForm(isAddNew: true);
+                if (vehicle == null) return;
+
+                _vehicleService.AddVehicle(vehicle);
+                MessageBox.Show("Thêm xe thành công!");
+                LoadVehicles();
+                ClearForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm: " + ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgVehicles.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn xe để cập nhật.");
+                return;
+            }
+
+            try
+            {
+                Vehicle vehicle = GetVehicleFromForm(isAddNew: false);
+                if (vehicle == null) return;
+
+                _vehicleService.UpdateVehicle(vehicle);
+                MessageBox.Show("Cập nhật xe thành công!");
+                LoadVehicles();
+                ClearForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật: " + ex.Message);
+            }
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgVehicles.SelectedItem is Vehicle selectedVehicle)
+            {
+                if (MessageBox.Show("Bạn có chắc muốn xóa xe này?", "Xác nhận", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    try
+                    {
+                        _vehicleService.DeleteVehicle(selectedVehicle);
+                        MessageBox.Show("Xóa xe thành công!");
+                        LoadVehicles();
+                        ClearForm();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi xóa (xe có thể đang được thuê): " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn xe để xóa.");
+            }
+        }
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            string keyword = txtSearch.Text;
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập Biển số hoặc Model để tìm.");
+                return;
+            }
+            dgVehicles.ItemsSource = _vehicleService.SearchVehicles(keyword);
+        }
+
+        private void btnShowAll_Click(object sender, RoutedEventArgs e)
+        {
+            txtSearch.Text = "";
+            LoadVehicles();
+        }
+        private void ClearForm()
+        {
+            txtVehicleID.Text = "";
+            txtLicensePlate.Text = "";
+            txtModel.Text = "";
+            txtStatus.Text = "Available";
+            txtStationID.Text = "";
+            dgVehicles.SelectedItem = null;
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearForm();
+        }
+        private void dgVehicles_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgVehicles.SelectedItem is Vehicle selectedVehicle)
+            {
+                txtVehicleID.Text = selectedVehicle.VehicleId.ToString();
+                txtLicensePlate.Text = selectedVehicle.LicensePlate;
+                txtModel.Text = selectedVehicle.Model;
+                txtStatus.Text = selectedVehicle.Status;
+                txtStationID.Text = selectedVehicle.CurrentStationId?.ToString() ?? "";
+            }
+        }
+        private Vehicle GetVehicleFromForm(bool isAddNew)
+        {
+            int? stationId = null;
+            if (!string.IsNullOrEmpty(txtStationID.Text))
+            {
+                if (int.TryParse(txtStationID.Text, out int id))
+                {
+                    stationId = id;
+                }
+                else
+                {
+                    MessageBox.Show("Station ID phải là số.");
+                    return null;
+                }
+            }
+
+            Vehicle vehicle;
+            if (isAddNew)
+            {
+                vehicle = new Vehicle();
+            }
+            else
+            {
+                vehicle = dgVehicles.SelectedItem as Vehicle;
+                if (vehicle == null) return null;
+            }
+            vehicle.LicensePlate = txtLicensePlate.Text;
+            vehicle.Model = txtModel.Text;
+            vehicle.Status = txtStatus.Text;
+            vehicle.CurrentStationId = stationId;
+
+            return vehicle;
+        }
+    }
+}
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=EVRentalDB;User Id=sa;Password=12345;TrustServerCertificate=True;"
+  }
+}
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
+
+<Window x:Class="GroupAssignment.VehicleManagementWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Vehicle Management" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" Background="DeepSkyBlue">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="1" Padding="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Text="Vehicle ID:" Grid.Row="0" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtVehicleID" Grid.Row="0" Grid.Column="1" Margin="5" IsReadOnly="True" Background="#EEE"/>
+                <TextBlock Text="License Plate:" Grid.Row="1" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtLicensePlate" Grid.Row="1" Grid.Column="1" Margin="5"/>
+                <TextBlock Text="Model:" Grid.Row="2" Grid.Column="0" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtModel" Grid.Row="2" Grid.Column="1" Margin="5"/>
+                <TextBlock Text="Status:" Grid.Row="0" Grid.Column="2" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtStatus" Grid.Row="0" Grid.Column="3" Margin="5" Text="Available"/>
+                <TextBlock Text="Station ID:" Grid.Row="1" Grid.Column="2" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtStationID" Grid.Row="1" Grid.Column="3" Margin="5"/>
+
+                <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <Button x:Name="btnAdd" Content="Add" Width="80" Margin="5" Click="btnAdd_Click"/>
+                    <Button x:Name="btnUpdate" Content="Update" Width="80" Margin="5" Click="btnUpdate_Click"/>
+                    <Button x:Name="btnDelete" Content="Delete" Width="80" Margin="5" Click="btnDelete_Click"/>
+                    <Button x:Name="btnClear" Content="Clear Form" Width="80" Margin="5" Click="btnClear_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,10,0,0">
+            <TextBlock Text="Search by License Plate or Model:" VerticalAlignment="Center" Margin="5,0"/>
+            <TextBox x:Name="txtSearch" Width="200" Margin="5,0"/>
+            <Button x:Name="btnSearch" Content="Search" Width="80" Margin="5,0" Click="btnSearch_Click"/>
+            <Button x:Name="btnShowAll" Content="Show All" Width="80" Margin="5,0" Click="btnShowAll_Click"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" x:Name="dgVehicles" Margin="0,10,0,0" 
+                  AutoGenerateColumns="False" IsReadOnly="True"
+                  SelectionChanged="dgVehicles_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding VehicleId}" Width="50"/>
+                <DataGridTextColumn Header="License Plate" Binding="{Binding LicensePlate}" Width="*"/>
+                <DataGridTextColumn Header="Model" Binding="{Binding Model}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Station ID" Binding="{Binding CurrentStationId}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VehicleManagementWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
+<Window x:Class="GroupAssignment.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Login" Height="250" Width="400"
+        WindowStartupLocation="CenterScreen" Background="DeepSkyBlue">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+        <TextBlock Text="Email:"/>
+        <TextBox x:Name="txtEmail" Margin="0,5,0,10" Text="admin@email.com"/>
+
+        <TextBlock Text="Password:"/>
+        <PasswordBox x:Name="txtPassword" Margin="0,5,0,10"/>
+
+        <Button x:Name="btnLogin" Content="Login" Click="btnLogin_Click"/>
+    </StackPanel>
+</Window>
+<Application x:Class="GroupAssignment.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GroupAssignment"
+             StartupUri="LoginWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
+
+using System.Configuration;
+using System.Data;
+using System.Windows;
+
+namespace GroupAssignment
+{
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+    }
+
+}
+
+using System.Windows;
+
+[assembly: ThemeInfo(
+    ResourceDictionaryLocation.None,            //where theme specific resource dictionaries are located
+                                                //(used if a resource is not found in the page,
+                                                // or application resource dictionaries)
+    ResourceDictionaryLocation.SourceAssembly   //where the generic resource dictionary is located
+                                                //(used if a resource is not found in the page,
+                                                // app, or any theme specific resource dictionaries)
+)]
