@@ -1,0 +1,15 @@
+E:\SWP ky moi\GroupAssignment\BLL\bin\Debug\net8.0\BLL.deps.json
+E:\SWP ky moi\GroupAssignment\BLL\bin\Debug\net8.0\BLL.dll
+E:\SWP ky moi\GroupAssignment\BLL\bin\Debug\net8.0\BLL.pdb
+E:\SWP ky moi\GroupAssignment\BLL\bin\Debug\net8.0\DAL.dll
+E:\SWP ky moi\GroupAssignment\BLL\bin\Debug\net8.0\DAL.pdb
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.csproj.AssemblyReference.cache
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.AssemblyInfoInputs.cache
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.AssemblyInfo.cs
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.csproj.CoreCompileInputs.cache
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.csproj.Up2Date
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.dll
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\refint\BLL.dll
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\BLL.pdb
+E:\SWP ky moi\GroupAssignment\BLL\obj\Debug\net8.0\ref\BLL.dll
