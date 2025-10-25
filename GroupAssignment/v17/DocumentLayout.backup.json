@@ -1,0 +1,303 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\SWP ky moi\\GroupAssignment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\vehiclemanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\vehiclemanagementwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\vehiclemanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\vehiclemanagementwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|e:\\swp ky moi\\groupassignment\\groupassignment\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{64033F70-7331-4423-84F7-501F8F81236D}|GroupAssignment\\GroupAssignment.csproj|solutionrelative:groupassignment\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\repositories\\vehiclerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\vehiclerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\repositories\\useraccountrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\entities\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\entities\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\entities\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\entities\\station.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\entities\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\entities\\rental.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|e:\\swp ky moi\\groupassignment\\dal\\entities\\evrentaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97BF1E8C-0BB1-4DB1-A6B0-4688481E1A44}|DAL\\DAL.csproj|solutionrelative:dal\\entities\\evrentaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}|BLL\\BLL.csproj|e:\\swp ky moi\\groupassignment\\bll\\service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}|BLL\\BLL.csproj|solutionrelative:bll\\service\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}|BLL\\BLL.csproj|e:\\swp ky moi\\groupassignment\\bll\\service\\useraccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{431D35CB-FA18-4D7A-8EC5-A72CCFB334E5}|BLL\\BLL.csproj|solutionrelative:bll\\service\\useraccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "GroupAssignment\\LoginWindow.xaml",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\LoginWindow.xaml",
+              "RelativeToolTip": "GroupAssignment\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-22T05:35:20.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VehicleManagementWindow.xaml",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\VehicleManagementWindow.xaml",
+              "RelativeDocumentMoniker": "GroupAssignment\\VehicleManagementWindow.xaml",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\VehicleManagementWindow.xaml",
+              "RelativeToolTip": "GroupAssignment\\VehicleManagementWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-22T05:35:15.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VehicleManagementWindow.xaml.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\VehicleManagementWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GroupAssignment\\VehicleManagementWindow.xaml.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\VehicleManagementWindow.xaml.cs*",
+              "RelativeToolTip": "GroupAssignment\\VehicleManagementWindow.xaml.cs*",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAswLAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:34:08.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "GroupAssignment\\LoginWindow.xaml.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\LoginWindow.xaml.cs*",
+              "RelativeToolTip": "GroupAssignment\\LoginWindow.xaml.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwCgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:33:28.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "GroupAssignment\\AssemblyInfo.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\AssemblyInfo.cs",
+              "RelativeToolTip": "GroupAssignment\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:33:14.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\App.xaml",
+              "RelativeDocumentMoniker": "GroupAssignment\\App.xaml",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\App.xaml",
+              "RelativeToolTip": "GroupAssignment\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-10-22T05:33:09.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VehicleRepository.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Repositories\\VehicleRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\VehicleRepository.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Repositories\\VehicleRepository.cs*",
+              "RelativeToolTip": "DAL\\Repositories\\VehicleRepository.cs*",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:50.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserAccountRepository.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Repositories\\UserAccountRepository.cs",
+              "RelativeDocumentMoniker": "DAL\\Repositories\\UserAccountRepository.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Repositories\\UserAccountRepository.cs*",
+              "RelativeToolTip": "DAL\\Repositories\\UserAccountRepository.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:25.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\Vehicle.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Vehicle.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\Vehicle.cs",
+              "RelativeToolTip": "DAL\\Entities\\Vehicle.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:23.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\User.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\User.cs",
+              "RelativeToolTip": "DAL\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:20.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Station.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\Station.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Station.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\Station.cs",
+              "RelativeToolTip": "DAL\\Entities\\Station.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:18.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Rental.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\Rental.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\Rental.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\Rental.cs",
+              "RelativeToolTip": "DAL\\Entities\\Rental.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:15.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\appsettings.json",
+              "RelativeDocumentMoniker": "GroupAssignment\\appsettings.json",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\GroupAssignment\\appsettings.json",
+              "RelativeToolTip": "GroupAssignment\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T05:26:04.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EVRentalDBContext.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\EVRentalDBContext.cs",
+              "RelativeDocumentMoniker": "DAL\\Entities\\EVRentalDBContext.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\DAL\\Entities\\EVRentalDBContext.cs*",
+              "RelativeToolTip": "DAL\\Entities\\EVRentalDBContext.cs*",
+              "ViewState": "AgIAAGoAAAAAAAAAAADwvyMAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:32:04.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\BLL\\Service\\VehicleService.cs",
+              "RelativeDocumentMoniker": "BLL\\Service\\VehicleService.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\BLL\\Service\\VehicleService.cs*",
+              "RelativeToolTip": "BLL\\Service\\VehicleService.cs*",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwBIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:31:58.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserAccountService.cs",
+              "DocumentMoniker": "E:\\SWP ky moi\\GroupAssignment\\BLL\\Service\\UserAccountService.cs",
+              "RelativeDocumentMoniker": "BLL\\Service\\UserAccountService.cs",
+              "ToolTip": "E:\\SWP ky moi\\GroupAssignment\\BLL\\Service\\UserAccountService.cs*",
+              "RelativeToolTip": "BLL\\Service\\UserAccountService.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:31:41.617Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1118,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
